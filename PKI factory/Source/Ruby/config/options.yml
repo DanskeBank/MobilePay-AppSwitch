@@ -1,0 +1,22 @@
+---
+mobile_pay:
+  customer_id: "your-customer-no"
+
+  bank_root_certificate_path: "./config/DBGROOT_1111110002/DBGROOT_1111110002.cer"
+  bank_encryption_certificate_path: "./config/DBG_encrypt.cer"
+  bank_signing_certificate_path: "./config/DBG_sign.cer"
+
+  client_generated_encryption_keystore_path: "./config/ClientGeneratedEncryption.pfx"
+  client_verified_encryption_keystore_path: "./config/ClientVerifiedEncryption.pfx"
+  client_generated_signing_keystore_path: "./config/ClientGeneratedSigning.pfx"
+  client_verified_signing_keystore_path: "./config/ClientVerifiedSigning.pfx"
+  client_keystore_password: "your-password"
+
+  merchant_id: "your-merchant-id"
+  mp_language: "DK"
+  mp_test: 'N'
+
+  pki_environment: "production" # "customertest"
+  pki_interface_version: 1
+  pki_key_generator: 'software'
+  pki_wsdl_uri: "./config/pki/PKIService.wsdl"

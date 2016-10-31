@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+# Specify your gem's dependencies in mobile_pay-app_switch.gemspec
+gemspec
+
+# Install mobile_pay-pki directly from source path.
+gem 'mobile_pay-pki', path: '../../../PKI factory/Source/Ruby'

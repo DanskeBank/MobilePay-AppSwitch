@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<project name="cxf wsdl2java" basedir="."  default="generateCXFClasses">
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties" />
+	
+	<!-- The cxf.properties file should contain definition of cfx.home -->
+	<property file="cxf.properties" />
+
+	<path id="cxf.classpath">
+		<fileset dir="${cxf.home}/lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="generateCXFClasses">
+		<delete quiet="true" includeemptydirs="true">
+			<fileset dir="auto-gen">
+				<include name="**" />
+			</fileset>
+		</delete>
+		<foreach target="-cxfWSDLToJava" param="wsdlFile">
+			<path>
+				<fileset dir=".">
+					<include name="src/resources/wsdl/pki/*.wsdl" />
+					<include name="src/resources/wsdl/soapsg/*.wsdl" />
+				</fileset>
+			</path>
+		</foreach>
+	</target>
+
+	<target name="-cxfWSDLToJava">
+		<replace file="${wsdlFile}" token="schemaLocation=&quot;http://docs.oasis-open.org/wss/2004/01/" value="schemaLocation=&quot;" />
+
+		<echo message="Generates code for ${wsdlFile}" />
+		<basename property="wsdl.filename" file="${wsdlFile}"/>
+		<java classname="org.apache.cxf.tools.wsdlto.WSDLToJava" fork="true">
+			<arg value="-client" />
+			<arg value="-d" />
+			<arg value="auto-gen" />
+			<arg value="-exsh" />
+			<arg value="true" />
+			<arg value="-impl" />
+			<arg value="-validate" />
+			<arg value="-defaultValues" />
+			<arg value="-fe" />
+			<arg value="jaxws" />
+			<arg value="-db" />
+			<arg value="jaxb" />
+			<arg value="-wsdlLocation" />
+			<arg value="${wsdl.filename}" />
+			<arg value="-wv" />
+			<arg value="1.1" />
+			<arg value="${wsdlFile}" />
+			<jvmarg value="-Djavax.xml.accessExternalSchema=all" />
+			<classpath>
+				<path refid="cxf.classpath" />
+			</classpath>
+		</java>
+	</target>
+
+</project>

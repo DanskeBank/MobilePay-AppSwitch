@@ -1,0 +1,20 @@
+						*************************************************************************
+						*								        *
+						* GetReservations API release notes, MobilePay Appswitch by Danske Bank *
+						*								        *	
+						*************************************************************************
+
+--------------------------------------------
+Release GetReservations V01 [2015-12-03]
+--------------------------------------------
+
+SUMMARY:                    New service to acquire list of active reservations within given time span
+
+
+New Features and Changes:
+-------------------------------
+
+- Date interval added to input in order to narrow down look up of given transaction in tables
+  Example: DateFrom = 20151101 -> DateTo = 20151102
+
+- ActionCodes 'A' and 'S' to distinguish between ALL reservations for a specific merchant, or all reservations for a SINGLE customer

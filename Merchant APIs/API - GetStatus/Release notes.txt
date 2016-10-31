@@ -1,0 +1,33 @@
+						***********************************************************************
+						*								      *
+						*   GetStatus API release notes, MobilePay Appswitch by Danske Bank   *
+						*								      *	
+						***********************************************************************
+
+--------------------------------------------
+Update GetStatus V03 [2016-05-27]
+--------------------------------------------
+
+SUMMARY:                     Texts updated for GetStatusV03
+
+
+New Features and Changes:
+-------------------------------
+
+- Reevaluating texts for GetStatusV03 based on feedback
+
+
+--------------------------------------------
+Release GetStatus V03 [2015-09-17]
+--------------------------------------------
+
+SUMMARY:                     Added input fields and removed unused fields
+
+
+New Features and Changes:
+-------------------------------
+
+- Date interval added to input in order to narrow down look up of given transaction in tables
+  Example: DateFrom = 20151101 -> DateTo = 20151102
+
+- Removed input field TransactionID since it had become obsolete

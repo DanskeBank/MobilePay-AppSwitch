@@ -1,0 +1,46 @@
+						***********************************************************************
+						*								      *
+						*    Capture API release notes, MobilePay Appswitch by Danske Bank    *
+						*								      *	
+						***********************************************************************
+
+--------------------------------------------
+Update Capture V02 [2016-05-27]
+--------------------------------------------
+
+SUMMARY:                     Texts updated for CaptureV02
+
+
+New Features and Changes:
+-------------------------------
+
+- Reevaluating texts for CaptureV02 based on feedback
+
+
+--------------------------------------------
+Update Capture V02 [2015-12-03]
+--------------------------------------------
+
+SUMMARY:                     Minor bug fix - reason codes updated to accommodate latest errors
+
+
+New Features and Changes:
+-------------------------------
+
+- N/A
+
+
+--------------------------------------------
+Release Capture V02 [2015-09-17]
+--------------------------------------------
+
+SUMMARY:                     Added input fields and removed unused fields
+
+
+New Features and Changes:
+-------------------------------
+
+- Date interval added to input in order to narrow down look up of given transaction in tables
+  Example: DateFrom = 20151101 -> DateTo = 20151102
+
+- Removed input field TransactionID since it had become obsolete

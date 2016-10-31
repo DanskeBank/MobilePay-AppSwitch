@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_45 (Oracle Corporation)
+
+Name: DBGROOT_1111110002.cer
+SHA-256-Digest: 7Ru98Jt6jRcpW1tfpNCk7WK/jyaP3v4p+ml4SaEqWWU=
+

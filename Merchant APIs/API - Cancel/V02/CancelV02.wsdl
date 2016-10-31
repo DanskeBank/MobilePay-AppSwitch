@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:aut="http://danskebank.dk/AGENA/SecSSGW/AuthenticateService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.danskebank.com/services/" xmlns:ssgw="http://www.danskebank.com/SecureSoapSGW" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" targetNamespace="http://www.danskebank.com/services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This WSDL file has been generated according to specifications made by the Gemini Service Interface, on 09/30/2015 09:38:09 AM</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.danskebank.com/services/">
+      <xsd:element name="Cancel">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Input" type="tns:Input" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CancelResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Output" type="tns:Output" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FaultDetails" type="tns:ServiceFault" />
+      <xsd:complexType name="Input">
+        <xsd:sequence>
+          <xsd:element name="DateFrom" type="xsd:string" />
+          <xsd:element name="DateTo" type="xsd:string" />
+          <xsd:element name="MerchantID" type="xsd:string" />
+          <xsd:element name="OrderID" type="xsd:string" />
+          <xsd:element name="CustomerId" type="xsd:string" />
+          <xsd:element name="Test">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="Output">
+        <xsd:sequence>
+          <xsd:element name="ReturnCode" type="xsd:string" />
+          <xsd:element name="ReasonCode" type="xsd:string" />
+          <xsd:element name="OriginalTransactionId" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ServiceFault">
+        <xsd:sequence>
+          <xsd:element name="ErrorCode" type="xsd:string" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.danskebank.com/SecureSoapSGW">
+      <xsd:import schemaLocation="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" />
+      <xsd:complexType name="RequestHeaderType">
+        <xsd:sequence>
+          <xsd:element name="SenderId" type="xsd:string" />
+          <xsd:element name="SignerId1" type="xsd:string" />
+          <xsd:element name="SignerId2" type="xsd:string" />
+          <xsd:element name="SignerId3" type="xsd:string" />
+          <xsd:element name="DBCryptId" type="xsd:string" />
+          <xsd:element name="RequestId" type="xsd:string" />
+          <xsd:element name="Timestamp" type="xsd:string" />
+          <xsd:element name="Language" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RequestHeader" type="ssgw:RequestHeaderType" />
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://danskebank.dk/AGENA/SecSSGW/AuthenticateService">
+      <xsd:element name="Encryption">
+        <xsd:complexType>
+          <xsd:attribute name="active" type="xsd:boolean" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CancelInputMessage">
+    <wsdl:part name="parameters" element="tns:Cancel" />
+  </wsdl:message>
+  <wsdl:message name="CancelOutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelResponse" />
+  </wsdl:message>
+  <wsdl:message name="Security">
+    <wsdl:part name="Security" element="wsse:Security" />
+  </wsdl:message>
+  <wsdl:message name="RequestHeader">
+    <wsdl:part name="RequestHeader" element="ssgw:RequestHeader" />
+  </wsdl:message>
+  <wsdl:portType name="CancelV02">
+    <wsdl:operation name="Cancel">
+      <wsdl:input message="tns:CancelInputMessage" />
+      <wsdl:output message="tns:CancelOutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CancelV02" type="tns:CancelV02">
+    <wsdlsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Cancel">
+      <wsdlsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsdlsoap12:body use="literal" />
+        <wsdlsoap12:header wsdl:required="true" message="tns:Security" part="Security" use="literal" />
+        <wsdlsoap12:header wsdl:required="true" message="tns:RequestHeader" part="RequestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap12:body use="literal" />
+        <wsdlsoap12:header message="tns:Security" part="Security" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CancelV02Interface">
+    <wsdl:port name="CancelV02" binding="tns:CancelV02">
+      <wsdlsoap12:address location="https://privatemobilepayservicesCert.danskebank.com/P2M/BackendAPI/CancelV02" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

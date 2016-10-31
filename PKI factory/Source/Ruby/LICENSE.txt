@@ -1,0 +1,40 @@
+Danske Bank AppSwitch license terms
+
+Version 2, February 2016
+
+1.Definitions
+“Code” means the software (SDK and or API) provided to the Customer by Danske Bank under these terms for MobilePay AppSwitch.
+SDK (Software Development Kit) is a collection of software used for developing applications for a specific device or operating system.
+API (Application Program Interface) is a set of commands, functions, and protocols which can be used to call the Danske Bank backend.
+
+2.Granting of license
+Danske Bank grants the Customer a non-exclusive, time-limited, non-transferrable right to copy, modify, merge and use the code and documentation in those countries in which the Customer has been given permission to use AppSwitch. The code may be used only for the Customer’s own internal business purposes. The license is granted until the expiry or termination of the terms according to which the Customer has been given permission to use the code, or these terms, howsoever caused. The aforesaid is subject to the Customer meeting the standards and specifications set out in these terms or any other terms agreed between Danske Bank and the Customer regarding the use of the code.
+
+3.Versioning
+The SDK is versioned according to the following setup: {MAJOR}.{MINOR}.{PATCH}. Major and minor version changes cover new functionality and determine whether or not support is provided. Patch changes in a version are small upgrades that do not affect the Customer’s right to support.
+
+The APIs is only versioned with {MAJOR}, but each service under the APIs may have different versions.
+
+Generally, support is provided up to three versions back from the most recently released version of the SDK and the API, however, support will always be provided at least for one year for all released versions of the SDK.
+
+Example: Version 1.8.0 has just been released – available versions are 1.5.0, 1.6.4, 1.7.1, and 1.8.0. This means that version 1.5.0 is no longer supported, and all users of this version must therefore upgrade to at least version 1.6.0 in order to be entitled to support. If a 1.8.1 version is released, no upgrade is necessary since only a patch has been released which does not count towards the three latest versions.
+
+Danske Bank retains the right, however, to announce the expiry of support for certain versions. In such case, the announcement of expiry will be made at least one year in advance. If the Customer wants to continue to be entitled to support, then an upgrade to a newer version may be necessary after such announcement has been made.
+
+If a security issue or breach is discovered, a patch is released. In this situation, an upgrade to the latest version is enforced, and customers must upgrade within an agreed timeframe. This means that all versions prior to the security fix will be nullified and unsupported.
+
+
+4.Disclaimer of warranty
+The code is provided “AS IS” WITHOUT WARRANTY OF ANY KIND, either express or implied, including without limitation any warranties or condition of title, merchantability, fitness for a particular purpose and non-infringement. The Customer is responsible solely for determining the appropriateness of using or redistributing the code and assumes any risks associated with the Customer’s exercise of permissions under the license.
+
+5.Limitation of liability
+In no event will Danske Bank or its contributors be liable for any direct, indirect, incidental, special, exemplary or consequential damages (including, but not limited to, procurement of substitute goods or services, loss of use, data or profits; or business interruption) however caused, whether in contract, strict liability or tort arising in any way out of the use of this code.
+
+6.Open Source software
+The SDK may include source code which is licensed under an open source license agreement (“MIT License”). Use of the Open Source Software is subject those terms and conditions. The Licensee accepts to be bound by and comply with all such terms and conditions. Danske Bank disclaims any liability for any third party claims, including, but not limited to, any infringement claims, relating to the Customer’s use of the Open Source Software.
+
+7.Assignment
+The Customer may not assign its rights and obligations under these terms in any way without Danske Bank's prior written consent.
+
+8.Termination
+Upon expiry or termination of use of AppSwitch and according to these terms, howsoever caused, Danske Bank disables the merchant ID provided by Danske Bank to the Customer for the use of this code, and the Customer can no longer use the code provided under these terms.

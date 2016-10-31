@@ -1,0 +1,22 @@
+---
+mobile_pay:
+  customer_id: "1G5247"
+
+  bank_root_certificate_path: "./config/DBGROOT_1111110002/DBGRootCert.SYST.crt"
+  bank_encryption_certificate_path: "./keys/DBG_encrypt.cer"
+  bank_signing_certificate_path: "./keys/DBG_sign.cer"
+
+  client_generated_encryption_keystore_path: "./keys/ClientGeneratedEncryption.pfx"
+  client_verified_encryption_keystore_path: "./keys/ClientVerifiedEncryption.pfx"
+  client_generated_signing_keystore_path: "./keys/ClientGeneratedSigning.pfx"
+  client_verified_signing_keystore_path: "./keys/ClientVerifiedSigning.pfx"
+  client_keystore_password: "Qwe123123"
+
+  merchant_id: ""
+  mp_language: "DK"
+  mp_test: 'N'
+
+  pki_environment: "production"
+  pki_interface_version: 1
+  pki_key_generator: 'software'
+  pki_wsdl_uri: "./config/pki/PKIService.wsdl"

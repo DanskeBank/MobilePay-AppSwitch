@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:aut="http://danskebank.dk/AGENA/SecSSGW/AuthenticateService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.danskebank.com/services/" xmlns:ssgw="http://www.danskebank.com/SecureSoapSGW" xmlns:wsdlsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" targetNamespace="http://www.danskebank.com/services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This WSDL file has been generated according to specifications made by the Gemini Service Interface, on 03/12/2015 10:46:36 AM</wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="http://www.danskebank.com/services/">
+      <xsd:element name="GetStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dacGetStatusInput" type="tns:dacGetStatusInput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="dacGetStatusOutput" type="tns:dacGetStatusOutput" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="FaultDetails" type="tns:ServiceFault" />
+      <xsd:complexType name="dacGetStatusInput">
+        <xsd:sequence>
+          <xsd:element name="MerchantId">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="60" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="OrderId">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="50" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="CustomerId" type="xsd:string" />
+          <xsd:element name="ActionCode">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:length value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="Test">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:length value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="dacGetStatusOutput">
+        <xsd:sequence>
+          <xsd:element name="ReturnCode">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:length value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="ReasonCode">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:length value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="LatestPaymentStatus">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:length value="3" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element name="OriginalTransactionId">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:length value="20" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element default="0.0" name="OriginalAmount" type="xsd:decimal" />
+          <xsd:element name="NumOfTransactions">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="transactions">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="TimeStamp">
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:length value="23" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="PaymentStatus">
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:length value="3" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element name="TransactionId">
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:length value="20" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element default="0.0" name="Amount" type="xsd:decimal" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ServiceFault">
+        <xsd:sequence>
+          <xsd:element name="ErrorCode" type="xsd:string" />
+          <xsd:element name="ErrorMessage" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="TimeStamp" type="xsd:dateTime" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.danskebank.com/SecureSoapSGW">
+      <xsd:import schemaLocation="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" namespace="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" />
+      <xsd:complexType name="RequestHeaderType">
+        <xsd:sequence>
+          <xsd:element name="SenderId" type="xsd:string" />
+          <xsd:element name="SignerId1" type="xsd:string" />
+          <xsd:element name="SignerId2" type="xsd:string" />
+          <xsd:element name="SignerId3" type="xsd:string" />
+          <xsd:element name="DBCryptId" type="xsd:string" />
+          <xsd:element name="RequestId" type="xsd:string" />
+          <xsd:element name="Timestamp" type="xsd:string" />
+          <xsd:element name="Language" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="RequestHeader" type="ssgw:RequestHeaderType" />
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://danskebank.dk/AGENA/SecSSGW/AuthenticateService">
+      <xsd:element name="Encryption">
+        <xsd:complexType>
+          <xsd:attribute name="active" type="xsd:boolean" />
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetStatusInputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetStatusOutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Security">
+    <wsdl:part name="Security" element="wsse:Security" />
+  </wsdl:message>
+  <wsdl:message name="RequestHeader">
+    <wsdl:part name="RequestHeader" element="ssgw:RequestHeader" />
+  </wsdl:message>
+  <wsdl:portType name="GetStatusV02">
+    <wsdl:operation name="GetStatus">
+      <wsdl:input message="tns:GetStatusInputMessage" />
+      <wsdl:output message="tns:GetStatusOutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetStatusV02" type="tns:GetStatusV02">
+    <wsdlsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStatus">
+      <wsdlsoap12:operation soapAction="" style="document" />
+      <wsdl:input>
+        <wsdlsoap12:body use="literal" />
+        <wsdlsoap12:header wsdl:required="true" message="tns:Security" part="Security" use="literal" />
+        <wsdlsoap12:header wsdl:required="true" message="tns:RequestHeader" part="RequestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <wsdlsoap12:body use="literal" />
+        <wsdlsoap12:header message="tns:Security" part="Security" use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetStatusV02Interface">
+    <wsdl:port name="GetStatusV02" binding="tns:GetStatusV02">
+      <wsdlsoap12:address location="https://privatemobilepayservicesCert.danskebank.com/P2M/BackendAPI/GetStatusV02" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

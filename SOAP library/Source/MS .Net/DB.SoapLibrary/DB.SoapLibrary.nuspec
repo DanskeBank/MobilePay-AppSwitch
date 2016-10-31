@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$title$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Danske Bank</authors>
+    <owners>Danske Bank</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Library for invoking soap service gateway</description>
+    <copyright>Copyright 2016 Danske Bank</copyright>
+  </metadata>
+</package>
