@@ -1,5 +1,5 @@
 ﻿# MobilePay-SoapServices-SDK
-This repository contains the code and documentation for calling server-side MobilePay SOAP backend services in Danske Bank. Further documentation can be found in the [MobilePay AppSwitch API implementation guide](https://github.com/DanskeBank/MobilePay-AppSwitch-SDK/blob/master/guides/MobilePay%20AppSwitch%20API%20Implementation%20Guide.pdf "MobilePay AppSwitch API implementation guide").
+This repository contains the code and documentation for calling server-side MobilePay SOAP backend services in Danske Bank. Further documentation can be found in the [MobilePay AppSwitch API implementation guide](https://github.com/DanskeBank/MobilePay-AppSwitch/blob/master/MobilePay%20AppSwitch%20API%20Implementation%20Guide.pdf "MobilePay AppSwitch API implementation guide").
 
 ### Merchant APIs
 When the certificates are in place, the merchants can start interacting with the business endpoints (the merchant APIs). This folder contains the latest versions of all WSDL files as well as descriptions of input and output fields and values. Documentation describing how to test the setup is also available here.
