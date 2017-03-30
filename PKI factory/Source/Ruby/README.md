@@ -33,7 +33,7 @@ And then execute:
 
       $ bundle install
 
-Or download the latest ruby gem from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/PKI%20factory/Source/Ruby) install it yourself as:
+Or download the latest ruby gem from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/PKI%20factory/Source/Ruby/pkg) install it yourself as:
 
       $ gem install ./mobile_pay-pki-1.0.0
 
