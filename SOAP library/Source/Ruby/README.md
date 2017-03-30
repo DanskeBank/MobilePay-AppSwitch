@@ -9,9 +9,9 @@ In this code base you will find:
 This Ruby gem implements the MobilePay AppSwitch API client.
 The MobilePay AppSwitch API provides access to lifecycle management of MobilePay transactions using the PKI Client.
 
-The AppSwitch client depends on [Ruby PKI Factory client](https://github.com/DanskeBank/MobilePay-SoapServices-SDK/tree/master/PKI%20factory/Source/Ruby)
+The AppSwitch client depends on [Ruby PKI Factory client](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/PKI%20factory/Source/Ruby)
 
-Before using the PKI Client and the MobilePay AppSwitch client, it is strongly advised you are familiar with [MobilePay AppSwitch API Implementation Guide](https://github.com/DanskeBank/MobilePay-AppSwitch-SDK/tree/master/guides).
+Before using the PKI Client and the MobilePay AppSwitch client, it is strongly advised you are familiar with [MobilePay AppSwitch API Implementation Guide](https://github.com/DanskeBank/MobilePay-AppSwitch/blob/master/MobilePay%20AppSwitch%20API%20Implementation%20Guide.pdf).
 
 ## Installation
 
@@ -34,14 +34,14 @@ And then execute:
 
       $ bundle install
 
-Or download the latest ruby gems from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-SoapServices-SDK/tree/master/PKI%20factory/Source/Ruby/pkg) and [mobile_pay-app_switch](https://github.com/DanskeBank/MobilePay-SoapServices-SDK/tree/master/SOAP%20library/Source/Ruby/pkg) and install them yourself as:
+Or download the latest ruby gems from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/PKI%20factory/Source/Ruby/pkg) and [mobile_pay-app_switch](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/SOAP%20library/Source/Ruby/pkg) and install them yourself as:
 
       $ gem install ./mobile_pay-pki-1.0.0
       $ gem install ./mobile_pay-app_switch-1.0.0
 
 ## Usage
 
-Go to [Merchant APIs](https://github.com/DanskeBank/MobilePay-SoapServices-SDK/tree/master/Merchant%20APIs) for further documentation and resources.
+Go to [Merchant APIs](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/Merchant%20APIs) for further documentation and resources.
 
 Example of using the AppSwitch API client:
 
@@ -66,7 +66,7 @@ If you encounter an error, for instance using a wrong `MerchantId`, AppSwitch AP
 
       {:return_code=>"04", :reason_code=>"02", :latest_payment_status=>nil, :original_transaction_id=>nil, :original_amount=>"0.00", :num_of_transactions=>"00"}
 
-Please look up the error codes in [Merchant APIs](https://github.com/DanskeBank/MobilePay-SoapServices-SDK/tree/master/Merchant%20APIs).
+Please look up the error codes in [Merchant APIs](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/Merchant%20APIs).
 
 
 ## Development
@@ -77,7 +77,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/DanskeBank/MobilePay-SoapServices-SDK. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/DanskeBank/MobilePay-AppSwitch. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
