@@ -21,19 +21,19 @@ See [Installing Ruby](https://www.ruby-lang.org/en/documentation/installation/) 
 
 First clone the git repository to your local file system:
 
-      $ git clone git@github.com:DanskeBank/MobilePay-SoapServices-SDK.git --depth 1
+      $ git clone git@github.com:DanskeBank/MobilePay-AppSwitch.git --depth 1
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'mobile_pay-pki', path: './MobilePay-SoapServices-SDK/PKI factory/Source/Ruby'
+gem 'mobile_pay-pki', path: './MobilePay-AppSwitch/PKI factory/Source/Ruby'
 ```
 
 And then execute:
 
       $ bundle install
 
-Or download the latest ruby gem from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/PKI%20factory/Source/Ruby/pkg) install it yourself as:
+Or download the latest ruby gem from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/PKI%20factory/Source/Ruby) install it yourself as:
 
       $ gem install ./mobile_pay-pki-1.0.0
 
