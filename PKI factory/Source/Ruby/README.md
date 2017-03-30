@@ -2,7 +2,7 @@
 
 This folder contains example implementations in Ruby on how to interact with Danske Bank's PKI Factory.
 
-The [MobilePay AppSwitch API implementation guide](https://github.com/DanskeBank/MobilePay-AppSwitch-SDK/blob/master/guides/MobilePay%20AppSwitch%20API%20Implementation%20Guide.pdf "MobilePay AppSwitch API implementation guide") describes the PKI integration (chapter 4).
+The [MobilePay AppSwitch API implementation guide](https://github.com/DanskeBank/MobilePay-AppSwitch/blob/master/MobilePay%20AppSwitch%20API%20Implementation%20Guide.pdf "MobilePay AppSwitch API implementation guide") describes the PKI integration (chapter 4).
 
 When using the obtained certificates in interaction with the Danske Bank API, please consider how the certificates are stored. The test app uses the windows Cert Store, but further security meassures may be in order. An HSM setup may be appropriate; however, the library is currently not supporting this.
 
@@ -11,7 +11,7 @@ When using the obtained certificates in interaction with the Danske Bank API, pl
 This Ruby gem implements a PKI Client for the Danske Bank PKI Factory service.
 The PKI Factory service enables bank customers to manage certificates for use in secure communication with the bank.
 
-Before using the PKI Client and the MobilePay AppSwitch client, it is strongly advised you are familiar with [MobilePay AppSwitch API Implementation Guide](https://github.com/DanskeBank/MobilePay-AppSwitch-SDK/tree/master/guides).
+Before using the PKI Client and the MobilePay AppSwitch client, it is strongly advised you are familiar with [MobilePay AppSwitch API Implementation Guide](https://github.com/DanskeBank/MobilePay-AppSwitch/blob/master/MobilePay%20AppSwitch%20API%20Implementation%20Guide.pdf).
 
 ## Installation
 
@@ -33,7 +33,7 @@ And then execute:
 
       $ bundle install
 
-Or download the latest ruby gem from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-SoapServices-SDK/tree/master/PKI%20factory/Source/Ruby/pkg) install it yourself as:
+Or download the latest ruby gem from [mobile_pay-pki](https://github.com/DanskeBank/MobilePay-AppSwitch/tree/master/PKI%20factory/Source/Ruby/pkg) install it yourself as:
 
       $ gem install ./mobile_pay-pki-1.0.0
 
@@ -131,7 +131,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/DanskeBank/MobilePay-SoapServices-SDK. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/DanskeBank/MobilePay-AppSwitch. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
